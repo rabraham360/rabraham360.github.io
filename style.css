@@ -134,14 +134,17 @@ nav a:hover {
 }
 
 .project-image {
-    height: 200px;
+    height: 250px;
     width: 100%;
-    /* Placeholder styles for where your image will go */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #999;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+#vmixer { background-image: url('assets/VMixerIcon.png'); }
 
 .project-info {
     padding: 1.5rem;
@@ -203,4 +206,60 @@ footer p {
     .hero-content h1 {
         font-size: 2.2rem;
     }
+}
+
+/* Styling for the Project Page Heading */
+.projects-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #2c3e50;
+}
+
+/* Category Tags */
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3498db;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+    margin: 1rem 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #555;
+    border: 1px solid #e0e0e0;
+}
+
+/* Specific Image Handling for different IDs */
+#vmixer { 
+    background-image: url('assets/VMixerIcon.png'); 
+    background-size: 60%; /* Since it's 1024px, 60% of the card looks clean */
+}
+
+#project2 { background-color: #e5ebee; } /* Fallback colors */
+#project3 { background-color: #f6f8f9; }
+
+/* Ensure the Project Image container stays consistent */
+.project-image {
+    height: 250px;
+    width: 100%;
+    background-color: #ddd;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* This makes sure the 1024px image stays inside the box */
+    background-size: contain; 
 }
